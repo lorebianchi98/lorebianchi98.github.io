@@ -1,0 +1,138 @@
+/* =====================================================
+DEMO SECTION STYLES
+===================================================== */
+
+/* Section spacing */
+.demo-section {
+  margin-top: 2.5rem;
+}
+
+.demo-section h2 {
+  font-size: 1.9rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+.demo-intro {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* Demo list layout */
+.demo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Demo cards */
+.demo-item {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.demo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Demo images */
+.demo-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: scale-down;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.demo-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Demo info */
+.demo-info {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center relative to image */
+}
+
+.demo-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.demo-info p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.demo-info .demo-paper a {
+  color: #1e88e5;        /* match the hover link style */
+  text-decoration: underline;
+}
+
+.demo-info .demo-paper a:hover {
+  color: #155fa0;
+}
+
+.demo-badge {
+  display: inline-block;          /* only as wide as its text */
+  background-color: #e0ecff;      /* soft blue tone */
+  color: #004aad;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25em 0.7em;
+  border-radius: 9999px;          /* fully rounded pill shape */
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: flex-start;         /* avoids full-width stretch inside flex boxes */
+  width: fit-content;             /* ensures it doesn’t expand beyond text */
+}
+
+
+.demo-item:hover .demo-badge {
+  background-color: #c9dbff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .demo-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .demo-item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .demo-info {
+    padding: 1rem;
+    justify-content: flex-start; /* remove vertical centering */
+  }
+}

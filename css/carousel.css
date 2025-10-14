@@ -1,0 +1,91 @@
+/* =====================================================
+COOL STUFF CAROUSEL
+===================================================== */
+.cool-stuff-section {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.cool-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  max-height: 700px;
+  margin: 0 auto;
+}
+
+.cool-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  width: 100%;
+}
+
+.cool-item {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* Default image size */
+.cool-item img {
+  width: 70%;
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* Smaller size for GitHub stats images */
+.cool-item .github-stats-img {
+  width: 55%;
+  max-width: 400px;
+  margin: 0.5rem auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cool-item .github-stats-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Text */
+.cool-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #1e88e5;
+  z-index: 10;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: #1e88e5;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }

@@ -1,0 +1,60 @@
+/* =====================================================
+AWARDS
+===================================================== */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.award {
+  display: flex;
+  gap: 1.5rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  align-items: center;
+}
+
+.award-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.award-details h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.award-details .date {
+  margin: 0.3rem 0;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.award-details .description {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.award-details a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.award-details a:hover {
+  color: #1abc9c;
+}

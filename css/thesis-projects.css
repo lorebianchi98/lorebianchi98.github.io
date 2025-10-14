@@ -1,0 +1,146 @@
+/* =====================================================
+THESIS & PROJECTS STYLES
+===================================================== */
+
+/* Section spacing */
+.thesis-section,
+.projects-section {
+  margin-top: 2.5rem;
+}
+
+.thesis-section h2,
+.projects-section h2 {
+  font-size: 1.9rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+/* Thesis list layout */
+.thesis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Thesis cards */
+.thesis {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem 1.2rem;
+  color: #444;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thesis:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.thesis-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.thesis-meta .thesis-type {
+  font-weight: 600;
+  color: #1e88e5;
+}
+
+.thesis-meta .thesis-year {
+  font-style: italic;
+}
+
+.thesis-title {
+  margin: 0.3rem 0 0.6rem 0;
+  font-size: 1.2rem;
+}
+
+.thesis-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.thesis-title a:hover {
+  color: #1e88e5;
+}
+
+.thesis-supervisors,
+.thesis-desc {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =====================================================
+OTHER PROJECTS
+===================================================== */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Make the whole link block-style */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Card styling */
+.project-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem 1.2rem;
+  color: #444;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover effect on the entire clickable card */
+.project-link:hover .project-item {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  background-color: #fafafa;
+}
+
+.project-item h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover .project-item h3 {
+  color: #1e88e5;
+}
+
+.project-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+@media (max-width: 700px) {
+  .thesis,
+  .project-item {
+    padding: 0.9rem;
+    text-align: center;
+  }
+
+  .thesis-title {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,81 @@
+/* =====================================================
+TECHNICAL SKILLS
+===================================================== */
+.technical-skills-section {
+  margin-top: 3rem;
+}
+
+.technical-skills-section h2 {
+  font-size: 1.9rem;
+  color: #222;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.subsection-title {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.core-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.core-item {
+  background: #f8f8f8;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.core-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.core-item i {
+  font-size: 2.5rem;
+  color: #1e88e5;
+  margin-bottom: 0.5rem;
+}
+
+.core-item h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.core-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.other-skills-list li {
+  background: #fff;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 0.7rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.other-skills-list li strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.other-skills-list i {
+  color: #1e88e5;
+  margin-right: 0.4rem;
+}

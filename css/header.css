@@ -1,0 +1,134 @@
+/* Header */
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Profile section */
+header .profile {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Profile image */
+header img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid #fff;
+}
+
+/* Title text */
+header .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+header .title h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header .title p {
+  margin: 0.2rem 0 0 0;
+  font-size: 1.5rem;
+  opacity: 0.85;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Typewriter effect */
+.header-typewriter {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.5em solid white;
+  animation: typing 2s steps(35) 1, blink 0.75s step-end infinite;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+  transition: opacity 0.3s;
+}
+
+.social-links a:hover { opacity: 0.7; }
+.social-links .hf-icon { width: 22px; height: 22px; vertical-align: middle; margin-bottom: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+.social-links a:hover .hf-icon { transform: scale(1.1); opacity: 0.8; }
+
+/* Navigation menu */
+/* Navigation menu */
+nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 0.8rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  position: relative; /* for underline animation */
+  transition: color 0.3s ease, transform 0.2s ease, background 0.3s ease;
+}
+
+/* Hover effect: background, lift, color change, underline animation */
+nav ul li a:hover {
+  background: #34495e;       /* subtle background change */
+  color: #1e88e5;            /* link text color changes to blue */
+  transform: translateY(-2px); /* lift effect */
+}
+
+/* Animated underline */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: #1e88e5; /* blue underline */
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  header { flex-direction: column; text-align: center; align-items: center; }
+  header .profile { flex-direction: column; align-items: center; margin-bottom: 0.5rem; }
+  header img { margin-bottom: 0.5rem; }
+  nav ul { justify-content: center; }
+}
+

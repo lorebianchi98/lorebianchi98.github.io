@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenzo Bianchi - Bio</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <!-- Shared header -->
+    <header id="site-header"></header>
+
+    <main>
+      <!-- ===== BIO ===== -->
+      <section class="bio-section">
+        <h2>About Me</h2>
+        <p>
+          Hi! 👋 I'm Lorenzo! I'm a passionate computer engineer currently pursuing a Ph.D. in
+          <em>Vision-Language Artificial Intelligence</em> at the
+          <a href="https://www.unipi.it/" target="_blank" class="blue-link"><em>University of Pisa</em></a>. I work as an
+          <em>Associate Researcher</em> at the
+          <a href="https://www.isti.cnr.it/en" target="_blank" class="blue-link"><em>Institute of Information Science and Technologies (ISTI)</em></a> of the
+          <a href="https://www.cnr.it/en" target="_blank" class="blue-link"><em>National Research Council (CNR)</em></a> in Pisa, Italy, under the supervision of the best possible team of mentors: <a href="https://scholar.google.com/citations?user=4Vr1dSQAAAAJ&hl=en" target="_blank" class="blue-link"><em>Dr. Fabrizio Falchi</em></a>, <a href="https://scholar.google.com/citations?user=SZR6mXsAAAAJ&hl=en" target="_blank" class="blue-link"><em>Dr. Fabio Carrara</em></a>,
+          <a href="https://scholar.google.com/citations?user=g-UGCd8AAAAJ&hl=en" target="_blank" class="blue-link"><em>Dr. Nicola Messina</em></a>, and <a href="https://scholar.google.com/citations?user=dXcskhIAAAAJ&hl=en" target="_blank" class="blue-link"><em>Dr. Giuseppe Amato</em></a>.
+        </p>
+        <p>
+          During my Ph.D., I have published at top-tier computer vision conferences such as
+          <a href="https://cvpr.thecvf.com/Conferences/2024" target="_blank" class="blue-link"><em>CVPR</em></a> (Highlight Poster) and <a href="https://iccv.thecvf.com/" target="_blank" class="blue-link"><em>ICCV</em></a>, and received
+          <em>Best Paper Awards</em> at both <a href="https://cbmi2024.org/" target="_blank" class="blue-link"><em>CBMI</em></a> and <a href="https://www.ieee-ch.org/" target="_blank" class="blue-link"><em>IEEE-CH</em></a>.
+          From <em>May to August 2025</em>, I had the opportunity to fulfill one of my childhood dreams by joining the Walt Disney family, working at
+          <a href="https://studios.disneyresearch.com/" target="_blank" class="blue-link"><em>Disney Research | Studios</em></a> in Zürich as a <em>Research Intern</em>, where I worked on the design
+          and end-to-end training of large-scale <em>diffusion models</em>, supervised by
+          <a href="https://scholar.google.com/citations?user=6ulbWKQAAAAJ&hl=en&oi=ao" target="_blank" class="blue-link"><em>Dr. Vinicius C. Azevedo</em></a>.
+        </p>
+        <p>
+          My research interests lie in the field of <em>Vision-Language Models (VLMs)</em>, with a focus on understanding, analyzing, and enhancing the representations learned by foundational models such as <em>CLIP</em> and <em>DINO</em> for image–text understanding. Building upon these representations, I explored a wide range of applications — including <em>image–text matching</em>, <em>retrieval</em>, <em>open-vocabulary object detection</em>, <em>semantic segmentation</em>, <em>image captioning</em>, and <em>text-conditioned image generation</em>. I am also particularly fascinated by approaches that minimize or eliminate human supervision (<em>unsupervised</em> and <em>weakly-supervised learning</em>).
+        </p>
+        <p>
+          Outside of research, I’m a little bit of a nerd. I love <em>video games</em>, <em>tv series</em>, and <em>films</em>. I’m also very passionate about sports: I like to <em>ski</em> (in the winter), play <em>beach volleyball</em> (in the summer), and <em>tennis</em> (all year round).
+        </p>
+        <p>
+          If you ever come to Italy, make sure to visit <a href="https://en.wikipedia.org/wiki/Collodi_(Italy)" target="_blank" class="blue-link">Collodi</a>, the wonderful hometown of both <a href="https://en.wikipedia.org/wiki/Pinocchio" target="_blank" class="blue-link">Pinocchio</a> and me!
+        </p>
+      </section>
+
+      <section class="bio-section">
+        <h2>Some cool stuffs about my journey</h2>
+        <div class="cool-carousel card-hover">
+          <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="cool-carousel-track">
+            <div class="cool-item">
+              <h3>My Research Journey</h3>
+              <p>Here’s a map showing the main stops in my academic and research path.</p>
+              <div id="research-map" style="width:100%;height:400px;border-radius:12px;"></div>
+            </div>
+            <div class="cool-item">
+              <h3>Github Stats</h3>
+              <p>Check out my <a href="https://github.com/lorebianchi98" target="_blank" class="grey-link">GitHub stats and contributions!</a></p>
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=lorebianchi98&show_icons=true&theme=default"
+                alt="GitHub Stats"
+                class="github-stats-img"
+              />
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=lorebianchi98&layout=compact&theme=default"
+                alt="Top Languages"
+                class="github-stats-img"
+              />
+            </div>
+            <div class="cool-item">
+              <h3>CVPR 2024 Interview</h3>
+              <p>Read my interview on Computer Vision News.</p>
+              <a href="https://www.rsipvision.com/CVPR2024-Friday/14/" target="_blank">
+                <img src="img/bio/cv_news.jpeg" alt="Interview">
+              </a>
+              <!-- Add more cool items here -->
+            </div>
+          </div>
+          <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="news-section">
+        <h2>Latest News</h2>
+        <ul class="news-list card-hover">
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> September 2025</span>
+            <span class="news-text">
+              Our paper
+              <a href="https://github.com/lorebianchi98/ReCoptic/tree/main" target="_blank" class="blue-link">
+                <strong>"ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices"</strong>
+              </a>
+              received the <strong>Best Paper Award</strong> at the
+              <a href="https://www.ieee-ch.org/" target="_blank" class="blue-link">
+                <strong>IEEE International Conference on Cyber Humanities (IEEE CH 2025)</strong>
+              </a>, in Florence, Italy!
+            </span>
+    </li>
+
+    
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> July 2025</span>
+            <span class="news-text">
+              Our paper
+              <a href="https://lorebianchi98.github.io/Talk2DINO/" target="_blank" class="blue-link">
+                <strong>"Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation"</strong>
+              </a> at
+              <a href="https://iccv.thecvf.com/" target="_blank" class="blue-link"><strong>ICCV 2025</strong></a> in Honolulu, Hawaii!
+            </span>
+          </li>
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> May 2025</span>
+            <span class="news-text">
+              I'm joining
+              <a href="https://studios.disneyresearch.com/" target="_blank" class="blue-link">
+                <strong>Disney Research | Studios</strong>
+              </a>
+              to work as a <strong>Research Intern</strong> in Zürich (Switzerland), to work on large-scale <strong>diffusion models</strong> for image generation. I'll be there until August 2025
+            </span>
+          </li>
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> July 2024</span>
+            <span class="news-text">
+              I attended the
+              <a href="https://icvss.dmi.unict.it/icvss2024/" target="_blank" class="blue-link">
+                <strong>International Computer Vision Summer School 2024</strong>
+              </a>
+              in Sicily, where I also presented a poster on our <strong>CVPR</strong> paper.
+            </span>
+          </li>
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> September 2024</span>
+            <span class="news-text">
+              Our paper
+              <a href="https://lorebianchi98.github.io/FG-CLIP/" target="_blank" class="blue-link">
+                <strong>"Is CLIP the Main Roadblock for Fine-Grained Open-World Perception?"</strong>
+              </a>
+              won the <strong>Best Paper Award</strong> at the
+              <a href="https://cbmi2024.org/" target="_blank" class="blue-link">
+                <strong>International Conference on Content-Based Multimedia Indexing (CBMI 2024)</strong>
+              </a>, in Rekyavik, Iceland!
+            </span>
+          </li>
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> June 2024</span>
+            <span class="news-text">
+              Our paper
+              <a href="https://lorebianchi98.github.io/FG-OVD/" target="_blank" class="blue-link">
+                <strong>"The Devil is in the Fine-Grained Details: Evaluating Open-Vocabulary Object Detectors for Fine-Grained Understanding"</strong>
+              </a>
+              was selected as a <strong>Highlight Paper</strong> at
+              <a href="https://cvpr.thecvf.com/Conferences/2024" target="_blank" class="blue-link"><strong>CVPR 2024</strong></a> in Seattle, Washington!
+            </span>
+          </li>
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> September 2023</span>
+            <span class="news-text">
+              I attended in the
+              <a href="https://www.ellis.unimore.it/summer-school/" target="_blank" class="blue-link">
+                <strong>ELLIS Summer School on Large-Scale AI for Research and Industry</strong>
+              </a>
+              in Modena.
+            </span>
+          </li>
+          <li>
+            <span class="news-date"><i class="fas fa-calendar-alt"></i> March 2023</span>
+            <span class="news-text">
+              I'm joining the
+              <a href="https://aimh.isti.cnr.it/" target="_blank" class="blue-link"><strong>Artificial Intelligence for Media and Humanities (AIMH) Lab</strong></a>
+              at the
+              <a href="https://www.isti.cnr.it/en" target="_blank" class="blue-link">Institute of Information Science and Technologies (ISTI–CNR)</a>
+              in Pisa as a <strong>Research Associate</strong>.
+            </span>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- Shared footer -->
+    <footer id="site-footer"></footer>
+    <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/research_map.js"></script>
+  </body>
+</html>

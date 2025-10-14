@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenzo Bianchi - Demos</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Shared header -->
+    <header id="site-header"></header>
+
+    <main>
+      <section class="demo-section">
+        <h2>Interactive Demos</h2>
+        <p class="demo-intro">
+          Discover hands-on demos where you can test some of the models I've built together with my awesome colleagues.
+        </p>
+        <div class="demo-list">
+          <!-- Demo 1 -->
+          <a href="https://huggingface.co/spaces/lorebianchi98/Talk2DINO" target="_blank" class="demo-item">
+            <img src="img/demos/talk2dino.png" alt="Talk2DINO thumbnail">
+            <div class="demo-info">
+              <h3>Talk2DINO</h3>
+              <span class="demo-badge">Open-Vocabulary Semantic Segmentation</span>
+              <p>
+                Try <strong>Talk2DINO</strong>, the official model of the <em>ICCV 2025</em> paper:
+                <strong>"Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation"</strong>.
+              </p>
+              <p>
+                <strong>Talk2DINO</strong> bridges <em>CLIP</em> and <em>DINOv2</em> by mapping <em>text embeddings</em> from CLIP into the <em>patch-level feature space</em> of DINOv2.
+                This enables <em>open-vocabulary segmentation</em>, combining the <em>language understanding</em> of CLIP with the <em>fine-grained spatial localization</em> of DINOv2.
+                The model can distinguish <em>foreground objects</em> from the <em>background</em> and produces <em>natural, precise segmentations</em> in a flexible way.
+              </p>
+              <p>
+                <strong>Talk2DINO</strong> sets a new <em>state-of-the-art</em>, achieving top performance on <em>7 out of 8 unsupervised open-vocabulary semantic segmentation benchmarks</em>, despite its method simplicity.
+              </p>
+            </div>
+          </a>
+          <a href="https://huggingface.co/spaces/Ruggero1912/Patch-ioner" target="_blank" class="demo-item">
+            <img src="img/demos/patchioner.png" alt="Patchioner thumbnail">
+            <div class="demo-info">
+              <h3>Patch-ioner</h3>
+              <span class="demo-badge">Image Captioning</span>
+              <p>
+                Explore <strong>Patch-ioner</strong>, the official framework of the paper
+                <strong>
+                  "One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework"
+                </strong>.
+            </p>
+              <p>
+                <strong>Patch-ioner</strong> redefines image captioning by shifting from an <em>image-centric</em> to a
+                <em>patch-centric</em> perspective. Instead of describing whole images, it treats individual
+                <em>patches</em> as atomic captioning units and aggregates them to describe arbitrary regions —
+                from single patches to complex or full-image areas.
+              </p>
+              <p>
+                Built on the <em>DINOv2</em> backbone, which provides <em>dense and localized visual features</em>,
+                <strong>Patch-ioner</strong> enables <em>zero-shot captioning</em> without any region-level supervision.
+                It supports <em>region-based</em>, <em>dense</em>, and <em>trace captioning</em>, allowing users to
+                generate captions for any selected region within an image.
+              </p>
+            </div>
+          </a>
+          <a href="https://huggingface.co/spaces/lorebianchi98/NoctOWL" target="_blank" class="demo-item">
+            <img src="img/demos/noctowl.png" alt="NoctOWL thumbnail">
+            <div class="demo-info">
+              <h3>NoctOWL</h3>
+              <span class="demo-badge">Open-Vocabulary Object Detection</span>
+              <p>
+                <strong>NoctOWL</strong> (<em><strong>N</strong>ot <strong>O</strong>nly <strong>C</strong>oarse-<strong>T</strong>ext <strong>O</strong>pen-<strong>W</strong>orld <strong>L</strong>ocalizator</em>) extends open-vocabulary detection to the
+                <em>fine-grained level</em>, enabling models to recognize subtle object properties — such as <em>color</em>, <em>material</em>, and <em>pattern</em> — beyond traditional class-based recognition.
+              </p>
+              <p>
+                It is trained with a <em>contrastive loss</em> on a <em>weakly labeled dataset</em> automatically generated using a large language model (LLM),
+                and incorporates a <em>distillation loss</em> to preserve coarse-level concepts while improving attribute-level discrimination.
+              </p>
+              <p>
+                We evaluate <strong>NoctOWL</strong> on the <em>Fine-Grained Open-Vocabulary Object Detection (FG-OVD)</em> benchmark suite,
+                where it establishes a <em>strong baseline</em> for future research in <em>fine-grained open-world visual understanding</em>.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Shared footer -->
+    <footer id="site-footer"></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenzo Bianchi - Publications</title>
+    <link rel="icon"  href="img/icon.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/publications.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Shared header -->
+    <header id="site-header"></header>
+
+    <main>
+      <h1>Publications</h1>
+      <p>This is the Publications page. Here you'll find my research papers, complete with descriptions and links to all related resources.</p>
+      <h2>Top Conference Papers</h2>
+
+      <div class="publication-list">
+        <!-- Article 1 -->
+        <article class="publication card-hover">
+          <img src="img/publications/talk2dino.png" alt="Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation" class="pub-image">
+          <div class="pub-details">
+            <h3>Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation</h3>
+            <p class="authors">Luca Barsellotti*, <strong>Lorenzo Bianchi*</strong>, Nicola Messina, Fabio Carrara, Marcella Cornia, Lorenzo Baraldi, Fabrizio Falchi, Rita Cucchiara</p>
+            <p class="venue">IEEE/CVF International Conference on Computer Vision (<strong>ICCV</strong>), 2025</p>
+            <p class="pub-links">
+              <a href="http://arxiv.org/abs/2411.19331" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+              <a href="https://lorebianchi98.github.io/Talk2DINO/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+              <a href="https://github.com/lorebianchi98/Talk2DINO" target="_blank"><i class="fab fa-github"></i> Code</a> |
+              <a href="https://huggingface.co/papers/2411.19331" target="_blank"><i class="fa-solid fa-face-laugh-beam"></i> Hugging Face</a>
+              | <a href="https://huggingface.co/spaces/lorebianchi98/Talk2DINO" target="_blank"><i class="fa-solid fa-laptop-code"></i> Demo</a>
+            </p>
+            <p class="description">
+              While <em>CLIP</em> has shown remarkable <em>vision-language understanding</em> at the <em>global image level</em>, it lacks <em>fine-grained understanding</em>. On the other hand, <em>DINOv2</em> exhibits strong <em>semantic correspondences</em> at the <em>patch level</em>, but as a <em>self-supervised backbone</em>, it isn’t natively aligned with text.<br><br>
+              In this paper, we propose to <em>bridge</em> these two models by learning a <em>mapping</em> from <em>CLIP text embeddings</em> into the <em>feature space of DINOv2</em>, enabling <em>open-vocabulary segmentation</em>. This mapping is learned through a <em>contrastive training</em> that exploits the <em>self-attention heads</em> of DINOv2, which are able to highlight <em>homogeneous regions</em> of the image, to align a caption only with its corresponding region.
+            </p>
+          </div>
+        </article>
+        <!-- Article 2 -->
+        <article class="publication card-hover">
+          <img src="img/publications/fgovd.png" alt="The devil is in the fine-grained details: Evaluating open-vocabulary object detectors for fine-grained understanding" class="pub-image">
+          <div class="pub-details">
+            <h3>The devil is in the fine-grained details: Evaluating open-vocabulary object detectors for fine-grained understanding</h3>
+            <p class="authors"><strong>Lorenzo Bianchi</strong>, Fabio Carrara, Nicola Messina, Claudio Gennaro, Fabrizio Falchi</p>
+            <p class="venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) <i>(Highlight Paper)</i>, 2024</p>
+            <p class="pub-links">
+              <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Bianchi_The_Devil_is_in_the_Fine-Grained_Details_Evaluating_Open-Vocabulary_Object_CVPR_2024_paper.html" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+              <a href="https://lorebianchi98.github.io/FG-OVD/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+              <a href="https://github.com/lorebianchi98/FG-OVD" target="_blank"><i class="fab fa-github"></i> Code</a> |
+              <a href="https://www.youtube.com/watch?v=3AIbqptBhmo" target="_blank"><i class="fab fa-youtube"></i> Video</a>
+            </p>
+            <p class="description">
+              Recent advances in <em>open-vocabulary object detection (OVD)</em> allow models to recognize objects described in <em>natural language</em>, yet they remain limited in understanding <em>fine-grained details</em> like color, texture, or material. <br><br>
+              This paper introduces <em>Fine-Grained Open-Vocabulary Detection (FG-OVD)</em> — a new <em>benchmark suite and evaluation protocol</em> designed to test how well detectors can differentiate subtle object attributes. Using <em>large language models (LLMs)</em>, we generate rich captions describing object properties, along with <em>negative variants</em> that swap attributes to probe model sensitivity. <br><br>
+              Experiments reveal that while current <em>state-of-the-art OVD models</em> perform well on standard benchmarks, they often fail to recognize fine attribute distinctions. FG-OVD provides the first comprehensive framework to analyze and improve detectors’ <em>fine-grained visual-language understanding</em>.
+            </p>
+          </div>
+        </article>
+      </div>
+      <h2>Other Conferences</h2>
+      <div class="publication-list">
+        <!-- Article 3 -->
+        <article class="publication card-hover">
+          <img src="img/publications/coptic.png" alt="ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices" class="pub-image">
+          <div class="pub-details">
+            <h3>ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices</h3>
+            <p class="authors"><strong>Lorenzo Bianchi</strong>, Alejandro Moreo, Fabrizio Falchi, Fabrizio Sebastiani, Costanza Bianchi</p>
+            <p class="venue"> IEEE International Conference on Cyber Humanities (<strong>IEEE CH</strong>) <i>(Best Paper Award)</i>, 2025</p>
+            <p class="pub-links">
+              <!-- <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> | -->
+              <a href="https://github.com/lorebianchi98/ReCoptic/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </p>
+            <p class="description">
+              Many <em>Coptic manuscripts</em> have been <em>dismembered</em> over the centuries, their pages scattered across libraries and collections worldwide. Reuniting these fragments is crucial for understanding the culture of Coptic-speaking communities but remains a highly challenging and time-consuming task. <br><br>
+              We introduce <em>ReCoptic</em>, a <em>probabilistic image-based system</em> that helps scholars virtually reconstruct ancient Coptic manuscripts. By analyzing scans of individual pages, ReCoptic estimates the <em>probability that two pages come from the same manuscript</em> and ranks all possible pairs accordingly. <br><br>
+              Trained through <em>supervised machine learning</em> on labeled page pairs, ReCoptic autonomously captures visual features such as line spacing, handwriting, and character size. Tested on over <em>6,000 manuscript pages</em>, it achieves <em>high accuracy</em> and offers an efficient, data-driven way to accelerate manuscript reconstruction.
+            </p>
+          </div>
+        </article>
+        <!-- Article 4 -->
+        <article class="publication card-hover">
+          <img src="img/publications/cbmi.png" alt="Is CLIP the main roadblock for fine-grained open-world perception?" class="pub-image">
+          <div class="pub-details">
+            <h3>Is CLIP the main roadblock for fine-grained open-world perception?</h3>
+            <p class="authors"><strong>Lorenzo Bianchi</strong>, Fabio Carrara, Nicola Messina, Fabrizio Falchi</p>
+            <p class="venue"> International Conference on Content-Based Multimedia Indexing (<strong>CBMI</strong>) <i>(Best Paper Award)</i>, 2024</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2404.03539" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+              <a href="https://lorebianchi98.github.io/FG-CLIP/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+              <a href="https://github.com/lorebianchi98/FG-CLIP" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </p>
+            <p class="description">
+              Open-vocabulary object detection (<em>OVD</em>) enables models to recognize objects described by <em>free-form text</em>, allowing adaptation to <em>new concepts</em> beyond the training set. While <em>CLIP</em> and similar vision-language backbones drive this progress, they often struggle with <em>fine-grained recognition</em>—distinguishing subtle visual attributes such as color, shape, or material. <br><br>
+              We investigate these limitations by evaluating CLIP on a <em>fine-grained object-matching benchmark</em> and find that its <em>latent space</em> poorly separates detailed object characteristics. Our analysis shows that fine-grained cues are indeed present in CLIP embeddings but are <em>not fully exploited</em> by standard similarity metrics like cosine matching. <br><br>
+              By adding simple <em>re-projection layers</em> on frozen CLIP encoders, we demonstrate improved discrimination of fine-grained attributes, opening the path toward <em>more perceptually detailed vision-language backbones</em>.
+            </p>
+          </div>
+        </article>
+      </div>
+      <h2>PrePrints</h2>
+      <div class="publication-list">
+        <article class="publication card-hover">
+          <img src="img/publications/patchioner.png" alt="One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework" class="pub-image">
+          <div class="pub-details">
+            <h3>One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework</h3>
+            <p class="authors"><strong>Lorenzo Bianchi*</strong>, Giacomo Pacini*, Fabio Carrara, Nicola Messina, Giuseppe Amato, Fabrizio Falchi</p>
+            <p class="venue"><strong>arXiv</strong>, 2025</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2510.02898" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+              <a href="https://paciosoft.com/Patch-ioner/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+              <a href="https://github.com/Ruggero1912/Patch-ioner/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a> |
+              <a href="https://huggingface.co/collections/Ruggero1912/patch-ioner-68e7ae42fed581777266b76a" target="_blank"><i class="fa-solid fa-face-laugh-beam"></i> Hugging Face</a> |
+              <a href="https://huggingface.co/spaces/Ruggero1912/Patch-ioner" target="_blank"><i class="fa-solid fa-laptop-code"></i> Demo</a>
+            </p>
+            <p class="description">
+              Traditional <em>zero-shot captioners</em> generate text from <em>global image features</em>, limiting their ability to describe specific regions or fine details. We introduce <em>Patch-ioner</em>, a unified framework that shifts from an <em>image-centric</em> to a <em>patch-centric</em> paradigm, enabling flexible captioning of arbitrary regions without region-level supervision. <br><br>
+              In Patch-ioner, each <em>image patch</em> is treated as an independent captioning unit. By aggregating patch representations, we can produce captions for any area — from small regions to entire images. Leveraging <em>DINO-based backbones</em> with strong localized representations, our approach achieves <em>state-of-the-art results</em> in several <em>zero-shot captioning tasks</em>, including dense, region-set, and the newly introduced <em>trace captioning</em>. <br><br>
+              This patch-level formulation unifies <em>local and global captioning</em> within a single framework, offering scalable and flexible zero-shot caption generation without paired image-text data.
+            </p>
+          </div>
+        </article>
+        <article class="publication card-hover">
+          <img src="img/publications/countingdino.png" alt="CountingDINO: A Training-free Pipeline for Class-Agnostic Counting using Unsupervised Backbones" class="pub-image">
+          <div class="pub-details">
+            <h3>CountingDINO: A Training-free Pipeline for Class-Agnostic Counting using Unsupervised Backbones</h3>
+            <p class="authors">Giacomo Pacini*, <strong>Lorenzo Bianchi*</strong>, Luca Ciampi, Nicola Messina, Giuseppe Amato, Fabrizio Falchi</p>
+            <p class="venue"><strong>arXiv</strong>, 2025</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2504.16570" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+              <a href="https://lorebianchi98.github.io/CountingDINO/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+              <a href="https://github.com/lorebianchi98/CountingDINO" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </p>
+            <p class="description">
+              Class-agnostic counting (<em>CAC</em>) aims to estimate object counts without being restricted to predefined categories. We introduce <em>CountingDINO</em>, the first <em>training-free, exemplar-based CAC framework</em> that leverages <em>self-supervised DINO features</em> to extract object-aware representations without any labeled data. <br><br>
+              At inference, exemplar features are extracted from user-specified regions and used to generate <em>similarity maps</em>, which are normalized into <em>density maps</em> for object counting. This approach scales to images of varying complexity and object size by partitioning and aggregating feature maps. <br><br>
+              Evaluated on the <em>FSC-147 benchmark</em>, CountingDINO outperforms training-free baselines, remains competitive with supervised methods, and demonstrates that <em>effective, label-free CAC</em> is possible for large-scale, flexible applications.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- Shared footer -->
+    <footer id="site-footer"></footer>
+    <script src="js/script.js"></script>
+    <!-- Image Modal -->
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+  </body>
+</html>
