@@ -1,4 +1,6 @@
-/* Header */
+/* =====================================================
+   HEADER
+===================================================== */
 header {
   background: #2c3e50;
   color: white;
@@ -9,7 +11,9 @@ header {
   flex-wrap: wrap;
 }
 
-/* Profile section */
+/* =====================================================
+   PROFILE SECTION
+===================================================== */
 header .profile {
   display: flex;
   align-items: flex-end;
@@ -43,18 +47,9 @@ header .title p {
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* Typewriter effect */
-.header-typewriter {
-  display: inline-block;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.5em solid white;
-  animation: typing 2s steps(35) 1, blink 0.75s step-end infinite;
-}
-
-/* Social Links */
+/* =====================================================
+SOCIAL LINKS
+===================================================== */
 .social-links {
   display: flex;
   gap: 2rem;
@@ -65,15 +60,30 @@ header .title p {
   color: white;
   text-decoration: none;
   font-size: 1.7rem;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.2s;
 }
 
-.social-links a:hover { opacity: 0.7; }
-.social-links .hf-icon { width: 22px; height: 22px; vertical-align: middle; margin-bottom: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
-.social-links a:hover .hf-icon { transform: scale(1.1); opacity: 0.8; }
+.social-links a:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
 
-/* Navigation menu */
-/* Navigation menu */
+.social-links .hf-icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-links a:hover .hf-icon {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* =====================================================
+NAVIGATION MENU
+===================================================== */
 nav {
   display: flex;
   align-items: flex-end;
@@ -97,18 +107,17 @@ nav ul li a {
   font-size: 1.3rem;
   padding: 0.4rem 0.8rem;
   border-radius: 15px;
-  position: relative; /* for underline animation */
+  position: relative;
   transition: color 0.3s ease, transform 0.2s ease, background 0.3s ease;
 }
 
-/* Hover effect: background, lift, color change, underline animation */
+/* Hover effect: subtle lift, blue highlight, animated underline */
 nav ul li a:hover {
-  background: #34495e;       /* subtle background change */
-  color: #1e88e5;            /* link text color changes to blue */
-  transform: translateY(-2px); /* lift effect */
+  background: #34495e;
+  color: #1e88e5;
+  transform: translateY(-2px);
 }
 
-/* Animated underline */
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -116,7 +125,7 @@ nav ul li a::after {
   bottom: 5px;
   width: 0%;
   height: 2px;
-  background-color: #1e88e5; /* blue underline */
+  background-color: #1e88e5;
   transition: width 0.3s ease;
 }
 
@@ -124,11 +133,74 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-  header { flex-direction: column; text-align: center; align-items: center; }
-  header .profile { flex-direction: column; align-items: center; margin-bottom: 0.5rem; }
-  header img { margin-bottom: 0.5rem; }
-  nav ul { justify-content: center; }
+/* Typewriter effect */
+.header-typewriter {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.5em solid white;
+  animation: typing 2s steps(35) 1, blink 0.75s step-end infinite;
+  width: fit-content;
+  max-width: 100%;
 }
 
+/* =====================================================
+RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  header .profile {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  header img {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-links {
+    justify-content: center; /* ✅ Center horizontally */
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 0.1rem 0.05rem;
+  }
+}
+
+/* Typing animation keyframes */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .header-typewriter {
+    font-size: 1.1rem !important; /* Force smaller font size */
+    border-right: 0.3em solid white;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-typewriter {
+    font-size: 1rem !important;
+  }
+}
