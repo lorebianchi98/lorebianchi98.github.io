@@ -20,9 +20,20 @@ defined in base.css
 ------------------------ */
 
 /* ------------------------
-4. Grey links
+4. Links
 defined in base.css
 ------------------------ */
+.cv-download-link, .cv-download-link a {
+  color: #1abc9c;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.cv-download-link:hover, .cv-download-link a:hover {
+  color: #16a085;
+  text-decoration: underline;
+}
 /* ------------------------
 5. Experience / Education / Summer / Reviewer sections
 ------------------------ */

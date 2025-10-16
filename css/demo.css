@@ -135,4 +135,7 @@ DEMO SECTION STYLES
     padding: 1rem;
     justify-content: flex-start; /* remove vertical centering */
   }
+  .demo-badge {
+    align-self: center;           /* center the badge on small screens */
+  }
 }

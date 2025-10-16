@@ -12,21 +12,32 @@ AWARDS
   display: flex;
   gap: 1.5rem;
   background: #fff;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.award:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .award-image {
-  width: 300px;
-  height: 300px;
+  flex: 0 0 140px;
+  width: 240px;
+  height: 240px;
   object-fit: contain;
   background-color: #fff;
   border-radius: 8px;
   border: 1px solid #ddd;
   padding: 5px;
   cursor: pointer;
+}
+
+.award-details {
+  flex: 1;
 }
 
 .award-details h3 {
@@ -57,4 +68,30 @@ AWARDS
 
 .award-details a:hover {
   color: #1abc9c;
+}
+
+/* =====================================================
+Responsive — match Experience behavior on mobile
+===================================================== */
+@media (max-width: 700px) {
+  .award {
+    flex-direction: column;          /* Stack image and text */
+    align-items: center;
+    text-align: center;
+    padding: 0.9rem 1rem;
+  }
+
+  .award-image {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 0.8rem;
+  }
+
+  .award-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .award-details .description {
+    font-size: 0.95rem;
+  }
 }

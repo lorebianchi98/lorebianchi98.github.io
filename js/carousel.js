@@ -27,7 +27,7 @@ function updateCarousel(animate = true) {
   if (allItems[currentIndex - 1]) allItems[currentIndex - 1].classList.add('left');
   if (allItems[currentIndex + 1]) allItems[currentIndex + 1].classList.add('right');
 
-  tryInitMap();
+  // tryInitMap();
 }
 
 // Handle transition end for seamless looping
@@ -43,7 +43,7 @@ track.addEventListener('transitionend', () => {
     track.style.transition = 'none';
     track.style.transform = `translateX(-${currentIndex * width}px)`;
   }
-  tryInitMap();
+  // tryInitMap();
 });
 
 function goToPrev() {
@@ -88,7 +88,7 @@ window.addEventListener('resize', () => updateCarousel(false));
 // Initialize carousel position
 window.addEventListener('DOMContentLoaded', () => {
   updateCarousel(false);
-  setTimeout(() => {
-    tryInitMap();
-  }, 10);
+  // setTimeout(() => {
+  //   tryInitMap();
+  // }, 10);
 });
