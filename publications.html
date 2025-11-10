@@ -69,16 +69,34 @@
       </div>
       <h2>Other Conferences</h2>
       <div class="publication-list">
-        <!-- Article 3 -->
-        <article class="publication card-hover">
-          <img src="img/publications/coptic.png" alt="ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices" class="pub-image">
-          <div class="pub-details">
-            <h3>ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices</h3>
-            <p class="authors"><strong>Lorenzo Bianchi</strong>, Alejandro Moreo, Fabrizio Falchi, Fabrizio Sebastiani, Costanza Bianchi</p>
-            <p class="venue"> IEEE International Conference on Cyber Humanities (<strong>IEEE CH</strong>) <i>(Best Paper Award)</i>, 2025</p>
-            <p class="pub-links">
-              <!-- <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> | -->
-              <a href="https://github.com/lorebianchi98/ReCoptic/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a>
+      <article class="publication card-hover">
+        <img src="img/publications/countingdino.png" alt="CountingDINO: A Training-free Pipeline for Class-Agnostic Counting using Unsupervised Backbones" class="pub-image">
+        <div class="pub-details">
+          <h3>CountingDINO: A Training-free Pipeline for Class-Agnostic Counting using Unsupervised Backbones</h3>
+          <p class="authors">Giacomo Pacini*, <strong>Lorenzo Bianchi*</strong>, Luca Ciampi, Nicola Messina, Giuseppe Amato, Fabrizio Falchi</p>
+          <p class="venue">IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2026</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2504.16570" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+            <a href="https://lorebianchi98.github.io/CountingDINO/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+            <a href="https://github.com/lorebianchi98/CountingDINO" target="_blank"><i class="fab fa-github"></i> Code</a>
+          </p>
+          <p class="description">
+            Class-agnostic counting (<em>CAC</em>) aims to estimate object counts without being restricted to predefined categories. We introduce <em>CountingDINO</em>, the first <em>training-free, exemplar-based CAC framework</em> that leverages <em>self-supervised DINO features</em> to extract object-aware representations without any labeled data. <br><br>
+            At inference, exemplar features are extracted from user-specified regions and used to generate <em>similarity maps</em>, which are normalized into <em>density maps</em> for object counting. This approach scales to images of varying complexity and object size by partitioning and aggregating feature maps. <br><br>
+            Evaluated on the <em>FSC-147 benchmark</em>, CountingDINO outperforms training-free baselines, remains competitive with supervised methods, and demonstrates that <em>effective, label-free CAC</em> is possible for large-scale, flexible applications.
+          </p>
+        </div>
+      </article>
+      <!-- Article 3 -->
+      <article class="publication card-hover">
+        <img src="img/publications/coptic.png" alt="ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices" class="pub-image">
+        <div class="pub-details">
+          <h3>ReCoptic: Computer Vision for the Reconstruction of Dismembered Coptic Codices</h3>
+          <p class="authors"><strong>Lorenzo Bianchi</strong>, Alejandro Moreo, Fabrizio Falchi, Fabrizio Sebastiani, Costanza Bianchi</p>
+          <p class="venue"> IEEE International Conference on Cyber Humanities (<strong>IEEE CH</strong>) <i>(Best Paper Award)</i>, 2025</p>
+          <p class="pub-links">
+            <!-- <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> | -->
+            <a href="https://github.com/lorebianchi98/ReCoptic/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a>
             </p>
             <p class="description">
               Many <em>Coptic manuscripts</em> have been <em>dismembered</em> over the centuries, their pages scattered across libraries and collections worldwide. Reuniting these fragments is crucial for understanding the culture of Coptic-speaking communities but remains a highly challenging and time-consuming task. <br><br>
@@ -129,33 +147,16 @@
             </p>
           </div>
         </article>
-        <article class="publication card-hover">
-          <img src="img/publications/countingdino.png" alt="CountingDINO: A Training-free Pipeline for Class-Agnostic Counting using Unsupervised Backbones" class="pub-image">
-          <div class="pub-details">
-            <h3>CountingDINO: A Training-free Pipeline for Class-Agnostic Counting using Unsupervised Backbones</h3>
-            <p class="authors">Giacomo Pacini*, <strong>Lorenzo Bianchi*</strong>, Luca Ciampi, Nicola Messina, Giuseppe Amato, Fabrizio Falchi</p>
-            <p class="venue"><strong>arXiv</strong>, 2025</p>
-            <p class="pub-links">
-              <a href="https://arxiv.org/abs/2504.16570" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
-              <a href="https://lorebianchi98.github.io/CountingDINO/" target="_blank"><i class="fas fa-link"></i> Project</a> |
-              <a href="https://github.com/lorebianchi98/CountingDINO" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </p>
-            <p class="description">
-              Class-agnostic counting (<em>CAC</em>) aims to estimate object counts without being restricted to predefined categories. We introduce <em>CountingDINO</em>, the first <em>training-free, exemplar-based CAC framework</em> that leverages <em>self-supervised DINO features</em> to extract object-aware representations without any labeled data. <br><br>
-              At inference, exemplar features are extracted from user-specified regions and used to generate <em>similarity maps</em>, which are normalized into <em>density maps</em> for object counting. This approach scales to images of varying complexity and object size by partitioning and aggregating feature maps. <br><br>
-              Evaluated on the <em>FSC-147 benchmark</em>, CountingDINO outperforms training-free baselines, remains competitive with supervised methods, and demonstrates that <em>effective, label-free CAC</em> is possible for large-scale, flexible applications.
-            </p>
-          </div>
-        </article>
       </div>
-    </main>
-    <!-- Shared footer -->
-    <footer id="site-footer"></footer>
-    <script src="js/script.js"></script>
-    <!-- Image Modal -->
-    <div id="imgModal" class="modal">
+      </main>
+        <!-- Shared footer -->
+        <footer id="site-footer"></footer>
+        <script src="js/script.js"></script>
+        <!-- Image Modal -->
+        <div id="imgModal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="modalImage">
     </div>
   </body>
-</html>
+  </html>
+  
