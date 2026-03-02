@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Florence, Italy',
       desc: 'IEEE-CH 2025 — Best Paper Award.'
     },
+    {
+      coords: [32.2226, -110.9747],
+      title: 'Tucson, USA',
+      desc: 'WACV 2026 — Paper Presentation.'
+    },
+    {
+      coords: [39.7392, -104.9903],
+      title: 'Denver, USA',
+      desc: 'CVPR 2026 — 2 Papers Presentation.'
+    },
 
   ];
   locations.forEach(function(loc) {

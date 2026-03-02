@@ -26,6 +26,50 @@
       <h2>Top Conference Papers</h2>
 
       <div class="publication-list">
+        <article class="publication card-hover">
+          <img src="img/publications/patchioner.png" alt="One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework" class="pub-image">
+          <div class="pub-details">
+            <h3>One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework</h3>
+            <p class="authors"><strong>Lorenzo Bianchi*</strong>, Giacomo Pacini*, Fabio Carrara, Nicola Messina, Giuseppe Amato, Fabrizio Falchi</p>
+            <p class="venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2026</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2510.02898" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
+              <a href="https://paciosoft.com/Patch-ioner/" target="_blank"><i class="fas fa-link"></i> Project</a> |
+              <a href="https://github.com/Ruggero1912/Patch-ioner/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a> |
+              <a href="https://huggingface.co/collections/Ruggero1912/patch-ioner-68e7ae42fed581777266b76a" target="_blank"><i class="fa-solid fa-face-laugh-beam"></i> Hugging Face</a> |
+              <a href="https://huggingface.co/spaces/Ruggero1912/Patch-ioner" target="_blank"><i class="fa-solid fa-laptop-code"></i> Demo</a>
+            </p>
+            <p class="description">
+              Traditional <em>zero-shot captioners</em> generate text from <em>global image features</em>, limiting their ability to describe specific regions or fine details. We introduce <em>Patch-ioner</em>, a unified framework that shifts from an <em>image-centric</em> to a <em>patch-centric</em> paradigm, enabling flexible captioning of arbitrary regions without region-level supervision. <br><br>
+              In Patch-ioner, each <em>image patch</em> is treated as an independent captioning unit. By aggregating patch representations, we can produce captions for any area — from small regions to entire images. Leveraging <em>DINO-based backbones</em> with strong localized representations, our approach achieves <em>state-of-the-art results</em> in several <em>zero-shot captioning tasks</em>, including dense, region-set, and the newly introduced <em>trace captioning</em>. <br><br>
+              This patch-level formulation unifies <em>local and global captioning</em> within a single framework, offering scalable and flexible zero-shot caption generation without paired image-text data.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article: CVPR 2026 -->
+        <article class="publication card-hover">
+          <img src="img/publications/fcdm.png" alt="Reviving ConvNeXt for Efficient Convolutional Diffusion Models" class="pub-image">
+          <div class="pub-details">
+            <h3>Reviving ConvNeXt for Efficient Convolutional Diffusion Models</h3>
+            <p class="authors">Taesung Kwon, <strong>Lorenzo Bianchi</strong>, Lennart Wittke, Felix Watine, Fabio Carrara, Jong Chul Ye, Romann M. Weber, Vinicius C. Azevedo</p>
+            <p class="venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2026</p>
+            <p class="pub-links">
+              <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Code & Paper coming soon</a>
+            </p>
+            <p class="description">
+              Recent diffusion models increasingly rely on Transformer backbones for scalability, but often at the cost of high computational demands. 
+              In this work, we introduce the <em>Fully Convolutional Diffusion Model (FCDM)</em>, a ConvNeXt-inspired backbone redesigned specifically for conditional diffusion modeling. 
+              <br><br>
+              FCDM integrates adaptive conditioning into ConvNeXt blocks and organizes them within an easily scalable U-shaped architecture parameterized by only two hyperparameters. 
+              Despite being fully convolutional, FCDM matches or surpasses Transformer-based diffusion models while requiring approximately <em>50% fewer FLOPs</em> and delivering substantial throughput improvements. 
+              <br><br>
+              On ImageNet at 256×256 and 512×512 resolution, FCDM-XL achieves state-of-the-art efficiency, faster convergence, and competitive FID performance compared to Diffusion Transformers. 
+              Our results demonstrate that modern convolutional architectures remain a powerful and highly efficient alternative for scaling diffusion models.
+            </p>
+          </div>
+        </article>
+
         <!-- Article 1 -->
         <article class="publication card-hover">
           <img src="img/publications/talk2dino.png" alt="Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation" class="pub-image">
@@ -95,7 +139,7 @@
           <p class="authors"><strong>Lorenzo Bianchi</strong>, Alejandro Moreo, Fabrizio Falchi, Fabrizio Sebastiani, Costanza Bianchi</p>
           <p class="venue"> IEEE International Conference on Cyber Humanities (<strong>IEEE CH</strong>) <i>(Best Paper Award)</i>, 2025</p>
           <p class="pub-links">
-            <!-- <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> | -->
+            <a href="https://ieeexplore.ieee.org/abstract/document/11279398" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
             <a href="https://github.com/lorebianchi98/ReCoptic/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a>
             </p>
             <p class="description">
@@ -125,29 +169,10 @@
           </div>
         </article>
       </div>
-      <h2>PrePrints</h2>
+      <!-- <h2>PrePrints</h2>
       <div class="publication-list">
-        <article class="publication card-hover">
-          <img src="img/publications/patchioner.png" alt="One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework" class="pub-image">
-          <div class="pub-details">
-            <h3>One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework</h3>
-            <p class="authors"><strong>Lorenzo Bianchi*</strong>, Giacomo Pacini*, Fabio Carrara, Nicola Messina, Giuseppe Amato, Fabrizio Falchi</p>
-            <p class="venue"><strong>arXiv</strong>, 2025</p>
-            <p class="pub-links">
-              <a href="https://arxiv.org/abs/2510.02898" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a> |
-              <a href="https://paciosoft.com/Patch-ioner/" target="_blank"><i class="fas fa-link"></i> Project</a> |
-              <a href="https://github.com/Ruggero1912/Patch-ioner/tree/main" target="_blank"><i class="fab fa-github"></i> Code</a> |
-              <a href="https://huggingface.co/collections/Ruggero1912/patch-ioner-68e7ae42fed581777266b76a" target="_blank"><i class="fa-solid fa-face-laugh-beam"></i> Hugging Face</a> |
-              <a href="https://huggingface.co/spaces/Ruggero1912/Patch-ioner" target="_blank"><i class="fa-solid fa-laptop-code"></i> Demo</a>
-            </p>
-            <p class="description">
-              Traditional <em>zero-shot captioners</em> generate text from <em>global image features</em>, limiting their ability to describe specific regions or fine details. We introduce <em>Patch-ioner</em>, a unified framework that shifts from an <em>image-centric</em> to a <em>patch-centric</em> paradigm, enabling flexible captioning of arbitrary regions without region-level supervision. <br><br>
-              In Patch-ioner, each <em>image patch</em> is treated as an independent captioning unit. By aggregating patch representations, we can produce captions for any area — from small regions to entire images. Leveraging <em>DINO-based backbones</em> with strong localized representations, our approach achieves <em>state-of-the-art results</em> in several <em>zero-shot captioning tasks</em>, including dense, region-set, and the newly introduced <em>trace captioning</em>. <br><br>
-              This patch-level formulation unifies <em>local and global captioning</em> within a single framework, offering scalable and flexible zero-shot caption generation without paired image-text data.
-            </p>
-          </div>
-        </article>
-      </div>
+
+      </div> -->
       </main>
         <!-- Shared footer -->
         <footer id="site-footer"></footer>
