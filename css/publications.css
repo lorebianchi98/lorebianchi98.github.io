@@ -8,6 +8,21 @@ PUBLICATIONS LIST
   margin-top: 1.5rem; 
 }
 
+.publication-group + .publication-group {
+  margin-top: 3rem;
+}
+
+.publications-loading,
+.publications-error {
+  margin: 1rem 0 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.publications-error {
+  color: #b00020;
+}
+
 .publication {
   display: flex;
   align-items: center;
