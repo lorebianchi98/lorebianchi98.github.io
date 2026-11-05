@@ -69,19 +69,31 @@
               <p>Here’s a map showing the main stops in my academic and research path.</p>
               <div id="research-map"></div>
             </div>
-            <div class="cool-item">
-              <h3>Github Stats</h3>
-              <p>Check out my <a href="https://github.com/lorebianchi98" target="_blank" class="grey-link">GitHub stats and contributions!</a></p>
-              <img
-                src="https://github-readme-stats.vercel.app/api?username=lorebianchi98&show_icons=true&theme=default"
-                alt="GitHub Stats"
-                class="github-stats-img"
-              />
-              <img
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=lorebianchi98&layout=compact&theme=default"
-                alt="Top Languages"
-                class="github-stats-img"
-              />
+            <div class="cool-item research-stats-item">
+              <h3>My Research Stats</h3>
+              <p>
+                Follow my work on
+                <a href="https://github.com/lorebianchi98" target="_blank" rel="noopener noreferrer" class="grey-link">GitHub</a>,
+                <a href="https://scholar.google.com/citations?user=4Vr1dSQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="grey-link">Google Scholar</a>,
+                and <a href="https://huggingface.co/lorebianchi98" target="_blank" rel="noopener noreferrer" class="grey-link">Hugging Face</a>.
+              </p>
+              <div class="research-stats" aria-live="polite">
+                <div class="research-stat">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  <span class="research-stat-value" id="gh-stars">Loading...</span>
+                  <span class="research-stat-label">GitHub stars</span>
+                </div>
+                <div class="research-stat">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <span class="research-stat-value" id="scholar-citations">Loading...</span>
+                  <span class="research-stat-label">Scholar citations</span>
+                </div>
+                <div class="research-stat">
+                  <i class="fas fa-download" aria-hidden="true"></i>
+                  <span class="research-stat-value" id="hf-downloads">Loading...</span>
+                  <span class="research-stat-label">HF Model downloads</span>
+                </div>
+              </div>
             </div>
             <div class="cool-item">
               <h3>CVPR 2024 Interview</h3>
@@ -226,5 +238,6 @@
     <script src="js/script.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/research_map.js"></script>
+    <script src="js/research_stats.js"></script>
   </body>
 </html>

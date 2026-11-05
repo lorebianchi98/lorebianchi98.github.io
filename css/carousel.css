@@ -39,19 +39,52 @@ COOL STUFF CAROUSEL
   object-fit: cover;
 }
 
-/* Smaller size for GitHub stats images */
-.cool-item .github-stats-img {
-  width: 55%;
-  max-width: 400px;
-  margin: 0.5rem auto;
-  display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Research stats */
+.research-stats-item {
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.cool-item .github-stats-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.research-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem auto 1rem;
+  max-width: 650px;
+  width: 100%;
+}
+
+.research-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1.25rem 0.75rem;
+  min-height: 230px;
+  border: 1px solid #e8eef5;
+  border-radius: 12px;
+  background: #f9fbff;
+}
+
+.research-stat i {
+  color: #1e88e5;
+  font-size: 1.5rem;
+}
+
+.research-stat-value {
+  color: #2c3e50;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.research-stat-label {
+  color: #666;
+  font-size: 0.85rem;
 }
 
 /* Text */
@@ -119,10 +152,24 @@ Responsive adjustments for mobile
     max-width: 95%;
   }
 
-  /* Enlarge GitHub stats images proportionally */
-  .cool-item .github-stats-img {
-    width: 80%;
-    max-width: 500px;
+  .research-stats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .research-stats-item {
+    min-height: 500px;
+  }
+
+  .research-stat {
+    display: flex;
+    text-align: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .research-stat i {
+    margin-bottom: 0.15rem;
   }
 
   /* Reduce padding slightly for better use of space */
