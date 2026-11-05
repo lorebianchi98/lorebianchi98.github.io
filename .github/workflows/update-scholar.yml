@@ -4,7 +4,6 @@ on:
   schedule:
     # Runs daily at 00:00 UTC
     - cron: '0 0 * * *'
-  # Allows manual triggering from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -25,49 +24,61 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install "bibtexparser<2.0.0" scholarly
+          pip install requests beautifulsoup4
 
       - name: Fetch Scholar Citations
         run: |
+          python - << 'EOF'
           import json
-          import re
+          import os
           import requests
           from bs4 import BeautifulSoup
 
           SCHOLAR_ID = "MBTBfJ4AAAAJ"
           url = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en"
           headers = {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-              "Accept-Language": "en-US,en;q=0.9"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+              "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+              "Accept-Language": "en-US,en;q=0.9",
+              "Sec-Ch-Ua": '"Not-A.Brand";v="99", "Chromium";v="124"',
+              "Sec-Ch-Ua-Mobile": "?0",
+              "Sec-Ch-Ua-Platform": '"Linux"'
           }
 
-          citations = 0
+          citations = None
+
           try:
-              resp = requests.get(url, headers=headers, timeout=15)
+              resp = requests.get(url, headers=headers, timeout=20)
               if resp.status_code == 200:
                   soup = BeautifulSoup(resp.text, "html.parser")
-                  # Scholar index table: first td.gsc_rsb_std is "All Citations"
+                  # First cell in the Scholar index table is all-time citations
                   stat_td = soup.find("td", class_="gsc_rsb_std")
-                  if stat_td:
-                      citations = int(stat_td.text.strip().replace(",", ""))
-                      print(f"Retrieved citations: {citations}")
+                  if stat_td and stat_td.text.strip():
+                      cleaned = stat_td.text.strip().replace(",", "")
+                      citations = int(cleaned)
+                      print(f"Successfully retrieved citations: {citations}")
                   else:
-                      print("Could not find citation counter on page.")
+                      print("Warning: Citation cell not found in HTML (possible captcha page).")
               else:
-                  print(f"Scholar returned status {resp.status_code}")
+                  print(f"Scholar returned HTTP status: {resp.status_code}")
           except Exception as e:
-              print(f"Scrape error: {e}")
+              print(f"Request failed: {e}")
 
-          # Preserve existing citations if blocked
-          if citations == 0:
-              try:
-                  with open("stats.json", "r") as f:
-                      citations = json.load(f).get("citations", 0)
-              except Exception:
-                  pass
+          # Preserve existing citation count if Google blocked this run
+          if citations is None:
+              print("Preserving existing stats.json value...")
+              if os.path.exists("stats.json"):
+                  try:
+                      with open("stats.json", "r") as f:
+                          citations = json.load(f).get("citations", 0)
+                  except Exception:
+                      citations = 0
+              else:
+                  citations = 0
 
           with open("stats.json", "w") as f:
               json.dump({"citations": citations}, f, indent=2)
+          EOF
 
       - name: Commit and push if changed
         run: |
