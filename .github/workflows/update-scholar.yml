@@ -1,26 +1,58 @@
-- name: Install dependencies
-  run: |
-    python -m pip install --upgrade pip
-    pip install "bibtexparser<2.0.0" scholarly
+name: Update Scholar Stats
 
-- name: Fetch Scholar Citations
-  run: |
-    python - << 'EOF'
-    import json
-    from scholarly import scholarly
+on:
+  schedule:
+    # Runs daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  # Allows manual triggering from the Actions tab
+  workflow_dispatch:
 
-    SCHOLAR_ID = "MBTBfJ4AAAAJ"
+permissions:
+  contents: write
 
-    try:
-        author = scholarly.search_author_id(SCHOLAR_ID)
-        author = scholarly.fill(author, sections=['indices'])
-        citations = author.get('citedby', 0)
-    except Exception as e:
-        print(f"Error fetching from Scholar: {e}")
-        citations = 0
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
 
-    data = {"citations": citations}
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-    with open("stats.json", "w") as f:
-        json.dump(data, f, indent=2)
-    EOF
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "bibtexparser<2.0.0" scholarly
+
+      - name: Fetch Scholar Citations
+        run: |
+          python - << 'EOF'
+          import json
+          from scholarly import scholarly
+
+          SCHOLAR_ID = "MBTBfJ4AAAAJ"
+
+          try:
+              author = scholarly.search_author_id(SCHOLAR_ID)
+              author = scholarly.fill(author, sections=['indices'])
+              citations = author.get('citedby', 0)
+              print(f"Retrieved citations: {citations}")
+          except Exception as e:
+              print(f"Error fetching from Scholar: {e}")
+              citations = 0
+
+          data = {"citations": citations}
+
+          with open("stats.json", "w") as f:
+              json.dump(data, f, indent=2)
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add stats.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update scholar citations" && git push)
