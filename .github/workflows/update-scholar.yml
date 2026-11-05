@@ -1,7 +1,7 @@
 - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install "bibtexparser<2.0.0" scholarly
+  run: |
+    python -m pip install --upgrade pip
+    pip install "bibtexparser<2.0.0" scholarly
 
 - name: Fetch Scholar Citations
   run: |
