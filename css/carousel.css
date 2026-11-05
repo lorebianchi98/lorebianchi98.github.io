@@ -41,21 +41,26 @@ COOL STUFF CAROUSEL
 
 /* Research stats */
 .research-stats-item {
-  min-height: 800px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   text-align: center;
+}
+
+.research-stats-item h3,
+.research-stats-item p {
+  width: 100%;
 }
 
 .research-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: 2rem auto 1rem;
+  margin: 1rem auto 0;
   max-width: 650px;
   width: 100%;
+  align-items: stretch;
 }
 
 .research-stat {
@@ -65,7 +70,7 @@ COOL STUFF CAROUSEL
   justify-content: center;
   gap: 0.35rem;
   padding: 1.25rem 0.75rem;
-  min-height: 230px;
+  min-height: 100px;
   border: 1px solid #e8eef5;
   border-radius: 12px;
   background: #f9fbff;
