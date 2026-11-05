@@ -29,26 +29,45 @@ jobs:
 
       - name: Fetch Scholar Citations
         run: |
-          python - << 'EOF'
           import json
-          from scholarly import scholarly
+          import re
+          import requests
+          from bs4 import BeautifulSoup
 
           SCHOLAR_ID = "MBTBfJ4AAAAJ"
+          url = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en"
+          headers = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+              "Accept-Language": "en-US,en;q=0.9"
+          }
 
+          citations = 0
           try:
-              author = scholarly.search_author_id(SCHOLAR_ID)
-              author = scholarly.fill(author, sections=['indices'])
-              citations = author.get('citedby', 0)
-              print(f"Retrieved citations: {citations}")
+              resp = requests.get(url, headers=headers, timeout=15)
+              if resp.status_code == 200:
+                  soup = BeautifulSoup(resp.text, "html.parser")
+                  # Scholar index table: first td.gsc_rsb_std is "All Citations"
+                  stat_td = soup.find("td", class_="gsc_rsb_std")
+                  if stat_td:
+                      citations = int(stat_td.text.strip().replace(",", ""))
+                      print(f"Retrieved citations: {citations}")
+                  else:
+                      print("Could not find citation counter on page.")
+              else:
+                  print(f"Scholar returned status {resp.status_code}")
           except Exception as e:
-              print(f"Error fetching from Scholar: {e}")
-              citations = 0
+              print(f"Scrape error: {e}")
 
-          data = {"citations": citations}
+          # Preserve existing citations if blocked
+          if citations == 0:
+              try:
+                  with open("stats.json", "r") as f:
+                      citations = json.load(f).get("citations", 0)
+              except Exception:
+                  pass
 
           with open("stats.json", "w") as f:
-              json.dump(data, f, indent=2)
-          EOF
+              json.dump({"citations": citations}, f, indent=2)
 
       - name: Commit and push if changed
         run: |
